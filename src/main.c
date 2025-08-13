@@ -87,12 +87,11 @@ int main(int argc, char* argv[]) {
         if (strcmp(clipboard, newClipboard) != 0) {
             if (term_log) printf("%s\n", newClipboard);
             if (fout != NULL) fprintf(fout, "%s\n", newClipboard);
+            SDL_free(clipboard);
             clipboard = newClipboard;
         }
         SDL_Delay(1);
-        SDL_free(newClipboard);
     }
-    SDL_free(clipboard);
     SDL_Quit();
     if (fout != NULL) {
         fclose(fout);

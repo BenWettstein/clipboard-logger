@@ -19,9 +19,6 @@ endif()
 
 # find packages
 find_package(SDL3 CONFIG REQUIRED)
-find_package(SDL3_image CONFIG REQUIRED)
-find_package(SDL3_ttf CONFIG REQUIRED)
-
 # find sorce *.c abd *.cpp files
 file(GLOB_RECURSE SRC_FILES
 	"${CMAKE_CURRENT_SOURCE_DIR}/src/*.c"
@@ -35,4 +32,4 @@ add_executable(ClipboardLogger ${SRC_FILES})
 
 target_include_directories(ClipboardLogger PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/include")
 
-target_link_libraries(ClipboardLogger PRIVATE SDL3::SDL3-static SDL3_image::SDL3_image SDL3_ttf::SDL3_ttf)
+target_link_libraries(ClipboardLogger PRIVATE SDL3::SDL3-static)
