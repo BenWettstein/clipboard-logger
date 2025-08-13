@@ -3,7 +3,9 @@ A simple command line program that just automatically appends new clipboard to a
 
 This program is built using cmake 
 CMAKE uses microsoft [vcpkg](https://github.com/microsoft/vcpkg) as the buildchain tool.
-##installation
+
+##  Installation
+
 if you want you can run the setup.bat to get vcpkg installed cloned automatically
 otherwise ensure that sdl3 is installed and setup the build tools include that library
 ## Usage
